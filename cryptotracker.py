@@ -5,7 +5,7 @@ from tkcalendar import DateEntry
 from tkinter import *
 from tkinter import ttk
 from DatabaseMgmt.databaseMgmt import DatabaseMgmt
-from Logic.calc import Calc
+from Logic.calc import Calc 
 
 class Budgetplan(ctk.CTk):
     DM = DatabaseMgmt()
