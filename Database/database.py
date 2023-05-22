@@ -25,10 +25,12 @@ class Transactions(Base):
     __tablename__ = 'transactions'
 
     transactionID = Column(Integer, primary_key=True)
-    date = Column(Date, nullable=False)
-    quantity = Column(String(30), nullable=False)
-    value = Column(Float(15), nullable=False)
-    purchasePrice = Column(Float(15), nullable=False)
+    date = Column(Date, nullable=False) # the date I buyed it
+    value = Column(Float(15), nullable=False) # How much money i spent
+    quantity = Column(Float(15), nullable=False) # How much of the coin I purchased
+    fees = Column(Float(15), nullable=False) # Fees Paied
+    purchasePrice = Column(Float(15), nullable=False) # Actual Price of the Coin
+    actualPrice = Column(Float(15), nullable=False) # After Fees
     coinID = Column(Integer, ForeignKey('coins.coinID'), nullable=False)
     coin = relationship('Coins', back_populates='transactions')
 

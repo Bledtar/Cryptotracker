@@ -1,4 +1,4 @@
-from Database.database import connect, Categories, Budget
+from Database.database import connect, Transactions, Coins
 from sqlalchemy import extract
 
 class DatabaseMgmt:
